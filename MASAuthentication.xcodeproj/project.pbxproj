@@ -172,7 +172,6 @@
 				TargetAttributes = {
 					CB4321D21D6615D600FFCF20 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = N88NFEJL48;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 1;
@@ -396,6 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MASAuthentication/MASAuthentication.entitlements;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -413,6 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MASAuthentication/MASAuthentication.entitlements;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
