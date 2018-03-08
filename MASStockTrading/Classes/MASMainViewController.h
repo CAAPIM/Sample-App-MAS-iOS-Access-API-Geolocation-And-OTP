@@ -1,6 +1,6 @@
 //
 //  MASMainViewController.h
-//  MASAuthentication
+//  MASStockTrading
 //
 //  Copyright (c) 2016 CA. All rights reserved.
 //
@@ -10,7 +10,6 @@
 
 #import <UIKit/UIKit.h>
 
-#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 
 /**
  * An example view controller with a background and some suggestions

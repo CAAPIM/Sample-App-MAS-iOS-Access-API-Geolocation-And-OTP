@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  MASAuthentication
+//  MASStockTrading
 //
 //  Copyright (c) 2016 CA. All rights reserved.
 //
@@ -9,7 +9,6 @@
 //
 
 #import "AppDelegate.h"
-#import <MASFoundation/MASFoundation.h>
 
 @interface AppDelegate ()
 
@@ -20,15 +19,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    return YES;
-}
-
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
-{
-    //
-    //  Handle incoming authorization code response from SFSafariViewController
-    //
-    [[MASAuthorizationResponse sharedInstance] application:app openURL:url options:options];
     return YES;
 }
 

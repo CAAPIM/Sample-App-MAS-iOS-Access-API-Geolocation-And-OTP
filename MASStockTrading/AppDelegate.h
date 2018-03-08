@@ -1,6 +1,6 @@
 //
 //  AppDelegate.h
-//  MASAuthentication
+//  MASStockTrading
 //
 //  Copyright (c) 2016 CA. All rights reserved.
 //

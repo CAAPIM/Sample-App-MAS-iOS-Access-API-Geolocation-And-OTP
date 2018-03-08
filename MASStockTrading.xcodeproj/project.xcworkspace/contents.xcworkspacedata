@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MASAuthentication.xcodeproj">
+      location = "self:MASStockTrading.xcodeproj">
    </FileRef>
 </Workspace>

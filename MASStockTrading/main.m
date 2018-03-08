@@ -1,8 +1,8 @@
 //
 //  main.m
-//  MASAuthentication
+//  MASStockTrading
 //
-//  Created by Hun Go on 2016-08-18.
+//  Created by Hun Go on 2016-08-17.
 //  Copyright © 2016 CA Technologies. All rights reserved.
 //
 
