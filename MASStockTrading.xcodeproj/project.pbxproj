@@ -148,7 +148,6 @@
 				52F5CFB61D6572C000D84C85 /* Resources */,
 				CB51E6F41D6D277600A9FAC6 /* Embed Frameworks */,
 				655DBC0A92051BE0BB8A08AB /* [CP] Embed Pods Frameworks */,
-				33BCBF205E12E02D411176AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,21 +205,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		33BCBF205E12E02D411176AD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MASStockTrading/Pods-MASStockTrading-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		655DBC0A92051BE0BB8A08AB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
