@@ -3,6 +3,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 target 'MASStockTrading' do
     # use_frameworks!
-    pod 'MASFoundation', '~> 1.9.10'
-    pod 'MASUI', '~> 1.9.10'
+    pod 'MASFoundation', '~> 2.0.00'
+    pod 'MASUI', '~> 2.0.00'
 end
