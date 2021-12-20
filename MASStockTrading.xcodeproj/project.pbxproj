@@ -15,7 +15,19 @@
 		52F5CFCA1D6572C100D84C85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F5CFC81D6572C100D84C85 /* LaunchScreen.storyboard */; };
 		52F5CFCD1D6572C100D84C85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F5CFCB1D6572C100D84C85 /* Main.storyboard */; };
 		C86ECE1C3A1DEFB6A40149AE /* libPods-MASStockTrading.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4583267A6D80A73A9E35E7 /* libPods-MASStockTrading.a */; };
+		FBBC565027703EA400992E79 /* MASStockTradingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBC564F27703EA400992E79 /* MASStockTradingUITests.m */; };
+		FBBC565227703EA400992E79 /* MASStockTradingUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBC565127703EA400992E79 /* MASStockTradingUITestsLaunchTests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FBBC565327703EA400992E79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F5CFB01D6572C000D84C85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52F5CFB71D6572C000D84C85;
+			remoteInfo = MASStockTrading;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		CB51E6F41D6D277600A9FAC6 /* Embed Frameworks */ = {
@@ -45,6 +57,9 @@
 		AA71948729A90D3E0D571B1D /* Pods-MASStockTrading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MASStockTrading.release.xcconfig"; path = "Pods/Target Support Files/Pods-MASStockTrading/Pods-MASStockTrading.release.xcconfig"; sourceTree = "<group>"; };
 		CD989DC91B069CB3317E88ED /* Pods-MASStockTrading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MASStockTrading.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MASStockTrading/Pods-MASStockTrading.debug.xcconfig"; sourceTree = "<group>"; };
 		DA4583267A6D80A73A9E35E7 /* libPods-MASStockTrading.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MASStockTrading.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBBC564D27703EA400992E79 /* MASStockTradingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MASStockTradingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBBC564F27703EA400992E79 /* MASStockTradingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASStockTradingUITests.m; sourceTree = "<group>"; };
+		FBBC565127703EA400992E79 /* MASStockTradingUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASStockTradingUITestsLaunchTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +68,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C86ECE1C3A1DEFB6A40149AE /* libPods-MASStockTrading.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBBC564A27703EA400992E79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +94,7 @@
 			children = (
 				48BFCFAA204DE59B00C50034 /* msso_config.json */,
 				52F5CFBA1D6572C000D84C85 /* MASStockTrading */,
+				FBBC564E27703EA400992E79 /* MASStockTradingUITests */,
 				52F5CFB91D6572C000D84C85 /* Products */,
 				DB1A9F1F387B503485E4430F /* Pods */,
 				45902F3062C647A2EEF2A12E /* Frameworks */,
@@ -82,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				52F5CFB81D6572C000D84C85 /* MASStockTrading.app */,
+				FBBC564D27703EA400992E79 /* MASStockTradingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +159,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FBBC564E27703EA400992E79 /* MASStockTradingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FBBC564F27703EA400992E79 /* MASStockTradingUITests.m */,
+				FBBC565127703EA400992E79 /* MASStockTradingUITestsLaunchTests.m */,
+			);
+			path = MASStockTradingUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,6 +191,24 @@
 			productReference = 52F5CFB81D6572C000D84C85 /* MASStockTrading.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FBBC564C27703EA400992E79 /* MASStockTradingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBBC565727703EA400992E79 /* Build configuration list for PBXNativeTarget "MASStockTradingUITests" */;
+			buildPhases = (
+				FBBC564927703EA400992E79 /* Sources */,
+				FBBC564A27703EA400992E79 /* Frameworks */,
+				FBBC564B27703EA400992E79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FBBC565427703EA400992E79 /* PBXTargetDependency */,
+			);
+			name = MASStockTradingUITests;
+			productName = MASStockTradingUITests;
+			productReference = FBBC564D27703EA400992E79 /* MASStockTradingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,6 +221,11 @@
 					52F5CFB71D6572C000D84C85 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
+					FBBC564C27703EA400992E79 = {
+						CreatedOnToolsVersion = 13.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 52F5CFB71D6572C000D84C85;
+					};
 				};
 			};
 			buildConfigurationList = 52F5CFB31D6572C000D84C85 /* Build configuration list for PBXProject "MASStockTrading" */;
@@ -177,6 +233,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -186,6 +243,7 @@
 			projectRoot = "";
 			targets = (
 				52F5CFB71D6572C000D84C85 /* MASStockTrading */,
+				FBBC564C27703EA400992E79 /* MASStockTradingUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +260,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FBBC564B27703EA400992E79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -211,18 +276,20 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MASStockTrading/Pods-MASStockTrading-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MASStockTrading/Pods-MASStockTrading-frameworks.sh",
 				"${PODS_ROOT}/MASFoundation/MASFoundation.framework",
+				"${PODS_ROOT}/MASProximity/MASProximity.framework",
 				"${PODS_ROOT}/MASUI/MASUI.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASFoundation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASProximity.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASUI.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MASStockTrading/Pods-MASStockTrading-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MASStockTrading/Pods-MASStockTrading-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E5AC340CFB9470957507F56A /* [CP] Check Pods Manifest.lock */ = {
@@ -256,7 +323,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FBBC564927703EA400992E79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBBC565027703EA400992E79 /* MASStockTradingUITests.m in Sources */,
+				FBBC565227703EA400992E79 /* MASStockTradingUITestsLaunchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FBBC565427703EA400992E79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52F5CFB71D6572C000D84C85 /* MASStockTrading */;
+			targetProxy = FBBC565327703EA400992E79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		52F5CFC81D6572C100D84C85 /* LaunchScreen.storyboard */ = {
@@ -398,6 +482,75 @@
 			};
 			name = Release;
 		};
+		FBBC565527703EA400992E79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apple.com.MASStockTradingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MASStockTrading;
+			};
+			name = Debug;
+		};
+		FBBC565627703EA400992E79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apple.com.MASStockTradingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MASStockTrading;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -415,6 +568,15 @@
 			buildConfigurations = (
 				52F5CFD21D6572C100D84C85 /* Debug */,
 				52F5CFD31D6572C100D84C85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBBC565727703EA400992E79 /* Build configuration list for PBXNativeTarget "MASStockTradingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBBC565527703EA400992E79 /* Debug */,
+				FBBC565627703EA400992E79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
