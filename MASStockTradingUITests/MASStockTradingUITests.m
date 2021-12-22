@@ -160,4 +160,61 @@
     }
 }
 
+
+
+- (void)test_SELL_Stocks {
+    
+    [_app launch];
+    
+    [self checkSystemAlerts];
+    [self checkStocks];
+    
+    XCUIElement *buyStocks = _app.staticTexts[SELL];
+    if([buyStocks exists]) {
+        [buyStocks tap];
+    }
+    
+    BOOL masuiCancelBtn = [_app.buttons[MAS_UI_CANCEL] waitForExistenceWithTimeout:TIME_INTERVAL];
+    
+    if(masuiCancelBtn) {
+        
+        XCUIElement *userElement = _app.textFields[MAS_UI_USER_TEXTFIELD];
+        XCUIElement *passwordElement = _app.secureTextFields[MAS_UI_PASSWORD_FIELD];
+        
+        [userElement tap];
+        [userElement typeText:USER_NAME];
+        
+        [passwordElement tap];
+        [passwordElement typeText:PASSWORD];
+        
+        XCUIElement *logInElement = _app.staticTexts[MAS_UI_LogIn];
+        [logInElement tap];
+        
+        BOOL invalidCredentials = [self checkInValidCredentials];
+        if(invalidCredentials) {
+            XCTAssertFalse(true);
+        }
+    }
+    
+    XCUIElement *textViewElement = _app.textViews[RESULT_TEXT_VIEW];
+
+    BOOL masui_OTP_CancelBtn_Flag = [_app.tables.staticTexts[CANCEL] waitForExistenceWithTimeout:TIME_INTERVAL];
+    if(masui_OTP_CancelBtn_Flag) {
+        XCUIElement *masui_OTP_CancelBtn = _app.tables.staticTexts[CANCEL];
+        [masui_OTP_CancelBtn tap];
+        
+        [self waitForElement:textViewElement];
+
+        NSString *strResult = [NSString stringWithFormat:@"%@",textViewElement.value];
+        XCTAssertTrue([strResult isEqualToString:USER_CANCEL_OTP_SELECTION]);
+        
+    } else {
+        
+        [self waitForElement:textViewElement];
+        NSString *strResult=[NSString stringWithFormat:@"%@",textViewElement.value];
+        XCTAssert([strResult containsString:MAS_RESPONSE_INFO_BODY_INFO_KEY]);
+        XCTAssert([strResult containsString:MAS_RESPONSE_INFO_HEADER_INFO_KEY]);
+    }
+}
+
 @end
