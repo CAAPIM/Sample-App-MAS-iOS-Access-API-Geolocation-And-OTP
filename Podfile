@@ -4,6 +4,5 @@ platform :ios, '14.0'
 target 'MASStockTrading' do
     # use_frameworks!
     pod 'MASFoundation', '~> 2.2.00'
-    pod 'MAS-Proximity', '~> 2.2.00'
     pod 'MASUI', '~> 2.2.00'
 end
