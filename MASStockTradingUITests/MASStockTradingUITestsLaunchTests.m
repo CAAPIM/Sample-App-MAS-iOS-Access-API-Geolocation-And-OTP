@@ -22,5 +22,4 @@
     self.continueAfterFailure = NO;
 }
 
-
 @end
