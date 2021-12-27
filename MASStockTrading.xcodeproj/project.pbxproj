@@ -277,14 +277,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MASStockTrading/Pods-MASStockTrading-frameworks.sh",
+				"${PODS_ROOT}/MAS-Proximity/MASProximity.framework",
 				"${PODS_ROOT}/MASFoundation/MASFoundation.framework",
-				"${PODS_ROOT}/MASProximity/MASProximity.framework",
 				"${PODS_ROOT}/MASUI/MASUI.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASFoundation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASProximity.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASFoundation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASUI.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

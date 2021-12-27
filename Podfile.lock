@@ -1,26 +1,26 @@
 PODS:
-  - MASFoundation (2.1.00)
-  - MASProximity (2.1.00):
-    - MASFoundation (= 2.1.00)
-  - MASUI (2.1.00):
-    - MASFoundation (= 2.1.00)
-    - MASProximity (= 2.1.00)
+  - MAS-Proximity (2.2.00):
+    - MASFoundation (= 2.2.00)
+  - MASFoundation (2.2.00)
+  - MASUI (2.2.00):
+    - MAS-Proximity (= 2.2.00)
+    - MASFoundation (= 2.2.00)
 
 DEPENDENCIES:
-  - MASFoundation (~> 2.1.00)
-  - MASUI (~> 2.1.00)
+  - MASFoundation (~> 2.2.00)
+  - MASUI (~> 2.2.00)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - MAS-Proximity
     - MASFoundation
-    - MASProximity
     - MASUI
 
 SPEC CHECKSUMS:
-  MASFoundation: a9e305f6abc4067b183038c23d77b48fe21be0e3
-  MASProximity: ef32ecf0240454c2669a970a847ac7d0601c7cba
-  MASUI: 37bd656aa49b4c4b0f54396cea96df8de41dd25a
+  MAS-Proximity: 812dab1e7130d3d9a6c4df7b506e796e4f0315b5
+  MASFoundation: 4a19642fdf35b3aeb170d94672c78ca86c9b8b4d
+  MASUI: 4329af1f3c65d0d82a977157de31c348b873058d
 
-PODFILE CHECKSUM: 5e59a5dfc8316d28adbca9d41fa45e4b06f7ca39
+PODFILE CHECKSUM: c5136a8b80263586752ca087db5ec68cf7fd9eca
 
 COCOAPODS: 1.10.2
