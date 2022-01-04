@@ -30,6 +30,9 @@
 #define MAS_RESPONSE_INFO_HEADER_INFO_KEY @"MASResponseInfoHeaderInfoKey"
 #define INVALID_CREDENTIALS               @"Username or password invalid"
 #define OK_BUTTON                         @"OK"
+#define HOST_NOT_REACHABLE                @"The network host is not currently reachable"
+
+
 
 
 @interface MASStockTradingUITests : XCTestCase
@@ -109,17 +112,38 @@
 - (void)test_BUY_Stocks {
     [_app launch];
     
+    //
+    // Check System Alerts - App permissions
+    //
+    
     [self checkSystemAlerts];
+    
+    //
+    // Enter Stocks and Count
+    //
+    
     [self checkStocks];
+    
+    //
+    // Buy Stocks
+    //
     
     XCUIElement *buyStocks = _app.staticTexts[BUY];
     if([buyStocks exists]) {
         [buyStocks tap];
     }
     
+    //
+    // Handling MASUI Login Page
+    //
+    
     BOOL masuiCancelBtn = [_app.buttons[MAS_UI_CANCEL] waitForExistenceWithTimeout:TIME_INTERVAL];
     
     if(masuiCancelBtn) {
+        
+        //
+        // MASUI Login and Password
+        //
         
         XCUIElement *userElement = _app.textFields[MAS_UI_USER_TEXTFIELD];
         XCUIElement *passwordElement = _app.secureTextFields[MAS_UI_PASSWORD_FIELD];
@@ -133,13 +157,31 @@
         XCUIElement *logInElement = _app.staticTexts[MAS_UI_LogIn];
         [logInElement tap];
         
+        //
+        // Check Invalid Login Credentials
+        //
+        
         BOOL invalidCredentials = [self checkInValidCredentials];
         if(invalidCredentials) {
-            XCTAssertFalse(true);
+            XCTAssertFalse(true, @"Entered Invalid credentials at MASUI Page");
+
+        } else {
+            XCTAssertTrue(true, @"Valid Credentials");
         }
     }
     
+    //
+    // Handling Buy Stocks JSON Results
+    //
+    
     XCUIElement *textViewElement = _app.textViews[RESULT_TEXT_VIEW];
+
+    XCTAssertNotNil(textViewElement.value, @"Buy stocks responce json print on textview");
+    
+    //
+    // For Multiple Stocks needs to enter OTP
+    // Here We are canceling OTP Functional
+    //
 
     BOOL masui_OTP_CancelBtn_Flag = [_app.tables.staticTexts[CANCEL] waitForExistenceWithTimeout:TIME_INTERVAL];
     if(masui_OTP_CancelBtn_Flag) {
@@ -153,30 +195,58 @@
         
     } else {
         
+        //
+        // Verifying valid JSON Response
+        //
+        
         [self waitForElement:textViewElement];
         NSString *strResult=[NSString stringWithFormat:@"%@",textViewElement.value];
+        if([strResult isEqualToString:HOST_NOT_REACHABLE]) {
+            XCTAssertNil(strResult, @"Net Work Error - Host Not Reachable");
+        }
         XCTAssert([strResult containsString:MAS_RESPONSE_INFO_BODY_INFO_KEY]);
         XCTAssert([strResult containsString:MAS_RESPONSE_INFO_HEADER_INFO_KEY]);
     }
 }
 
 
-
 - (void)test_SELL_Stocks {
     
     [_app launch];
     
+    //
+    // Check System Alerts - App permissions
+    //
+    
     [self checkSystemAlerts];
+    
+    //
+    // Enter Stocks and Count
+    //
+    
     [self checkStocks];
     
-    XCUIElement *buyStocks = _app.staticTexts[SELL];
-    if([buyStocks exists]) {
-        [buyStocks tap];
+    
+    //
+    // Sell Stocks
+    //
+
+    XCUIElement *sellStocks = _app.staticTexts[SELL];
+    if([sellStocks exists]) {
+        [sellStocks tap];
     }
+    
+    //
+    // Handling MASUI Login Page
+    //
     
     BOOL masuiCancelBtn = [_app.buttons[MAS_UI_CANCEL] waitForExistenceWithTimeout:TIME_INTERVAL];
     
     if(masuiCancelBtn) {
+        
+        //
+        // MASUI Login and Password
+        //
         
         XCUIElement *userElement = _app.textFields[MAS_UI_USER_TEXTFIELD];
         XCUIElement *passwordElement = _app.secureTextFields[MAS_UI_PASSWORD_FIELD];
@@ -190,13 +260,29 @@
         XCUIElement *logInElement = _app.staticTexts[MAS_UI_LogIn];
         [logInElement tap];
         
+        //
+        // Check Invalid Login Credentials
+        //
+        
         BOOL invalidCredentials = [self checkInValidCredentials];
         if(invalidCredentials) {
-            XCTAssertFalse(true);
+            XCTAssertFalse(true, @"Entered Invalid credentials at MASUI Page");
+
+        } else {
+            XCTAssertTrue(true, @"Valid Credentials");
         }
     }
     
+    //
+    // Handling Buy Stocks JSON Results
+    //
+    
     XCUIElement *textViewElement = _app.textViews[RESULT_TEXT_VIEW];
+
+    //
+    // For Multiple Stocks needs to enter OTP
+    // Here We are canceling OTP Functional
+    //
 
     BOOL masui_OTP_CancelBtn_Flag = [_app.tables.staticTexts[CANCEL] waitForExistenceWithTimeout:TIME_INTERVAL];
     if(masui_OTP_CancelBtn_Flag) {
@@ -210,8 +296,15 @@
         
     } else {
         
+        //
+        // Verifying valid JSON Response
+        //
+        
         [self waitForElement:textViewElement];
         NSString *strResult=[NSString stringWithFormat:@"%@",textViewElement.value];
+        if([strResult isEqualToString:HOST_NOT_REACHABLE]) {
+            XCTAssertNil(strResult, @"Net Work Error - Host Not Reachable");
+        }
         XCTAssert([strResult containsString:MAS_RESPONSE_INFO_BODY_INFO_KEY]);
         XCTAssert([strResult containsString:MAS_RESPONSE_INFO_HEADER_INFO_KEY]);
     }
