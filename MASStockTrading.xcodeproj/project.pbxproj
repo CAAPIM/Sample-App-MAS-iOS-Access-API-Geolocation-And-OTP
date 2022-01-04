@@ -289,7 +289,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MASStockTrading/Pods-MASStockTrading-frameworks.sh\"\n";
+            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MASStockTrading/Pods-MASStockTrading-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E5AC340CFB9470957507F56A /* [CP] Check Pods Manifest.lock */ = {

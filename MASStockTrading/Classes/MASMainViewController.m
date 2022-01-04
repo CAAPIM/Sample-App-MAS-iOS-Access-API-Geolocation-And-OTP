@@ -62,8 +62,6 @@
 //        
 //    }];
     
-    [MAS setGatewayNetworkActivityLogging:YES];
-
     [MAS start:^(BOOL completed, NSError *error) {
         
         //
