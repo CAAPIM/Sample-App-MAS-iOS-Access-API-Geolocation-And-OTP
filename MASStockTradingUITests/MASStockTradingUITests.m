@@ -8,8 +8,8 @@
 
 #import <XCTest/XCTest.h>
 
-#define USER_NAME                         @"admin"
-#define PASSWORD                          @"7layer"
+#define USER_NAME                         @"username"
+#define PASSWORD                          @"password"
 #define SYSTEM_ALERT_HANDLER              @"SystemAlertHandler"
 #define ALLOW_ONCE                        @"Allow Once"
 #define STOCK_CODE                        @"Stock Code"
@@ -44,16 +44,31 @@
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
-
+    
     // In UI tests it is usually best to stop immediately when a failure occurs.
     self.continueAfterFailure = NO;
-
+    
     // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     _app = [[XCUIApplication alloc] init];
+    
 }
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+}
+
+
+- (NSDictionary *)getCredentials {
+    
+    //
+    // Get Credentials from Json File
+    //
+    
+    NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"Credentials" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSArray *credentialsArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+    NSDictionary *cred = credentialsArray[0];
+    return cred;
 }
 
 - (void)checkSystemAlerts {
@@ -92,7 +107,7 @@
 -(BOOL)checkInValidCredentials {
     
     BOOL invalidCredentialFlag = [_app.alerts.staticTexts[INVALID_CREDENTIALS] waitForExistenceWithTimeout:TIME_INTERVAL];
-
+    
     if(invalidCredentialFlag) {
         XCUIElement *invalidCredential = _app.alerts.staticTexts[INVALID_CREDENTIALS];
         if ([invalidCredential exists]) {
@@ -101,7 +116,7 @@
             if([loginFailureAlert exists]){
                 [loginFailureAlert tap];
             }
-
+            
             return true;
         }
         return false;
@@ -149,10 +164,10 @@
         XCUIElement *passwordElement = _app.secureTextFields[MAS_UI_PASSWORD_FIELD];
         
         [userElement tap];
-        [userElement typeText:USER_NAME];
+        [userElement typeText:[[self getCredentials] valueForKey:USER_NAME]];
         
         [passwordElement tap];
-        [passwordElement typeText:PASSWORD];
+        [passwordElement typeText:[[self getCredentials] valueForKey:PASSWORD]];
         
         XCUIElement *logInElement = _app.staticTexts[MAS_UI_LogIn];
         [logInElement tap];
@@ -164,7 +179,7 @@
         BOOL invalidCredentials = [self checkInValidCredentials];
         if(invalidCredentials) {
             XCTAssertFalse(true, @"Entered Invalid credentials at MASUI Page");
-
+            
         } else {
             XCTAssertTrue(true, @"Valid Credentials");
         }
@@ -175,21 +190,21 @@
     //
     
     XCUIElement *textViewElement = _app.textViews[RESULT_TEXT_VIEW];
-
+    
     XCTAssertNotNil(textViewElement.value, @"Buy stocks responce json print on textview");
     
     //
     // For Multiple Stocks needs to enter OTP
     // Here We are canceling OTP Functional
     //
-
+    
     BOOL masui_OTP_CancelBtn_Flag = [_app.tables.staticTexts[CANCEL] waitForExistenceWithTimeout:TIME_INTERVAL];
     if(masui_OTP_CancelBtn_Flag) {
         XCUIElement *masui_OTP_CancelBtn = _app.tables.staticTexts[CANCEL];
         [masui_OTP_CancelBtn tap];
         
         [self waitForElement:textViewElement];
-
+        
         NSString *strResult = [NSString stringWithFormat:@"%@",textViewElement.value];
         XCTAssertTrue([strResult isEqualToString:USER_CANCEL_OTP_SELECTION]);
         
@@ -230,7 +245,7 @@
     //
     // Sell Stocks
     //
-
+    
     XCUIElement *sellStocks = _app.staticTexts[SELL];
     if([sellStocks exists]) {
         [sellStocks tap];
@@ -252,10 +267,10 @@
         XCUIElement *passwordElement = _app.secureTextFields[MAS_UI_PASSWORD_FIELD];
         
         [userElement tap];
-        [userElement typeText:USER_NAME];
+        [userElement typeText:[[self getCredentials] valueForKey:USER_NAME]];
         
         [passwordElement tap];
-        [passwordElement typeText:PASSWORD];
+        [passwordElement typeText:[[self getCredentials] valueForKey:PASSWORD]];
         
         XCUIElement *logInElement = _app.staticTexts[MAS_UI_LogIn];
         [logInElement tap];
@@ -267,7 +282,7 @@
         BOOL invalidCredentials = [self checkInValidCredentials];
         if(invalidCredentials) {
             XCTAssertFalse(true, @"Entered Invalid credentials at MASUI Page");
-
+            
         } else {
             XCTAssertTrue(true, @"Valid Credentials");
         }
@@ -278,19 +293,19 @@
     //
     
     XCUIElement *textViewElement = _app.textViews[RESULT_TEXT_VIEW];
-
+    
     //
     // For Multiple Stocks needs to enter OTP
     // Here We are canceling OTP Functional
     //
-
+    
     BOOL masui_OTP_CancelBtn_Flag = [_app.tables.staticTexts[CANCEL] waitForExistenceWithTimeout:TIME_INTERVAL];
     if(masui_OTP_CancelBtn_Flag) {
         XCUIElement *masui_OTP_CancelBtn = _app.tables.staticTexts[CANCEL];
         [masui_OTP_CancelBtn tap];
         
         [self waitForElement:textViewElement];
-
+        
         NSString *strResult = [NSString stringWithFormat:@"%@",textViewElement.value];
         XCTAssertTrue([strResult isEqualToString:USER_CANCEL_OTP_SELECTION]);
         

@@ -15,6 +15,8 @@
 		52F5CFCA1D6572C100D84C85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F5CFC81D6572C100D84C85 /* LaunchScreen.storyboard */; };
 		52F5CFCD1D6572C100D84C85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F5CFCB1D6572C100D84C85 /* Main.storyboard */; };
 		C86ECE1C3A1DEFB6A40149AE /* libPods-MASStockTrading.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4583267A6D80A73A9E35E7 /* libPods-MASStockTrading.a */; };
+		FB29315F27855D3600F14903 /* Credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = FB29315E27855D3600F14903 /* Credentials.json */; };
+		FB2931612785699800F14903 /* Credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = FB29315E27855D3600F14903 /* Credentials.json */; };
 		FBBC565027703EA400992E79 /* MASStockTradingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBC564F27703EA400992E79 /* MASStockTradingUITests.m */; };
 		FBBC565227703EA400992E79 /* MASStockTradingUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBC565127703EA400992E79 /* MASStockTradingUITestsLaunchTests.m */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,7 @@
 		AA71948729A90D3E0D571B1D /* Pods-MASStockTrading.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MASStockTrading.release.xcconfig"; path = "Pods/Target Support Files/Pods-MASStockTrading/Pods-MASStockTrading.release.xcconfig"; sourceTree = "<group>"; };
 		CD989DC91B069CB3317E88ED /* Pods-MASStockTrading.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MASStockTrading.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MASStockTrading/Pods-MASStockTrading.debug.xcconfig"; sourceTree = "<group>"; };
 		DA4583267A6D80A73A9E35E7 /* libPods-MASStockTrading.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MASStockTrading.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB29315E27855D3600F14903 /* Credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Credentials.json; sourceTree = "<group>"; };
 		FBBC564D27703EA400992E79 /* MASStockTradingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MASStockTradingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBC564F27703EA400992E79 /* MASStockTradingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASStockTradingUITests.m; sourceTree = "<group>"; };
 		FBBC565127703EA400992E79 /* MASStockTradingUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASStockTradingUITestsLaunchTests.m; sourceTree = "<group>"; };
@@ -162,6 +165,7 @@
 		FBBC564E27703EA400992E79 /* MASStockTradingUITests */ = {
 			isa = PBXGroup;
 			children = (
+				FB29315E27855D3600F14903 /* Credentials.json */,
 				FBBC564F27703EA400992E79 /* MASStockTradingUITests.m */,
 				FBBC565127703EA400992E79 /* MASStockTradingUITestsLaunchTests.m */,
 			);
@@ -253,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB2931612785699800F14903 /* Credentials.json in Resources */,
 				52F5CFCD1D6572C100D84C85 /* Main.storyboard in Resources */,
 				52F5CFC71D6572C100D84C85 /* Assets.xcassets in Resources */,
 				52F5CFCA1D6572C100D84C85 /* LaunchScreen.storyboard in Resources */,
@@ -264,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB29315F27855D3600F14903 /* Credentials.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
