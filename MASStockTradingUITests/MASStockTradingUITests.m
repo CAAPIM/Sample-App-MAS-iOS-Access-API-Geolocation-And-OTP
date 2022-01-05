@@ -201,6 +201,7 @@
     BOOL masui_OTP_CancelBtn_Flag = [_app.tables.staticTexts[CANCEL] waitForExistenceWithTimeout:TIME_INTERVAL];
     if(masui_OTP_CancelBtn_Flag) {
         XCUIElement *masui_OTP_CancelBtn = _app.tables.staticTexts[CANCEL];
+        XCTAssertTrue(masui_OTP_CancelBtn.exists, @"Unable to handle OTP Functionality, Canceling the Buying Stocks");
         [masui_OTP_CancelBtn tap];
         
         [self waitForElement:textViewElement];
@@ -302,6 +303,7 @@
     BOOL masui_OTP_CancelBtn_Flag = [_app.tables.staticTexts[CANCEL] waitForExistenceWithTimeout:TIME_INTERVAL];
     if(masui_OTP_CancelBtn_Flag) {
         XCUIElement *masui_OTP_CancelBtn = _app.tables.staticTexts[CANCEL];
+        XCTAssertTrue(masui_OTP_CancelBtn.exists, @"Unable to handle OTP Functionality, Canceling the Selling Stocks");
         [masui_OTP_CancelBtn tap];
         
         [self waitForElement:textViewElement];
