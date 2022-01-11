@@ -53,6 +53,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No. of Shares" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tj3-IC-9Ur">
+                                <accessibility key="accessibilityConfiguration" identifier="NumberOfShares"/>
+
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -67,6 +69,7 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kMI-b5-dK7">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ResultTextView"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="349" id="bEw-Id-B9x"/>
                                 </constraints>
